@@ -10,7 +10,7 @@ class App extends React.Component {
     super(props)
     this.state = {
       SearchResults: [],
-      playlistName: 'My Playlist',
+      playlistName: 'New Playlist Name',
       playlistTracks: []
     }
     this.addTrack = this.addTrack.bind(this)
@@ -55,7 +55,6 @@ class App extends React.Component {
   async search(term) {
     const results = await Spotify.search(term)
     this.setState({ SearchResults: results })
-    console.log(results)
   }
 
   render() {
