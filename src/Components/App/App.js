@@ -49,12 +49,18 @@ class App extends React.Component {
         playlistTracks: []
       })
     })
-    alert('Playlist saved to your Spotify account!')
+    alert('Playlist SAVED to your Spotify account!')
   }
 
   async search(term) {
     const results = await Spotify.search(term)
     this.setState({ SearchResults: results })
+  }
+
+  componentDidMount() {
+    window.addEventListener('load', () => {
+      Spotify.getAccessToken()
+    })
   }
 
   render() {

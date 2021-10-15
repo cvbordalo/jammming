@@ -1,5 +1,5 @@
 const clientId = '41d0feb85c4842b3874c53af0493b409'
-const redirectUri = 'http://localhost:3000'
+const redirectUri = 'http://carlinhosmusic.surge.sh'
 let accessToken
 
 const Spotify = {
